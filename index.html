@@ -1,46 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIM - Security Incident Mapping</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIM - Security Incident Mapping</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h1>SIM</h1>
-    <h2>Security Incident Mapping</h2>
+<header>
+<h1>SIM</h1>
+<p>Security Incident Mapping System</p>
+</header>
 
-    <form id="incidentForm">
+<nav>
+<a href="#home">Home</a>
+<a href="#report">Report</a>
+<a href="#emergency">Emergency</a>
+<a href="#about">About</a>
+</nav>
 
-        <label>Full Name (Optional)</label>
-        <input type="text" placeholder="Enter your name">
+<section id="home">
 
-        <label>Incident Type</label>
-        <select>
-            <option>Theft</option>
-            <option>Stabbing</option>
-            <option>Assault</option>
-            <option>Rape</option>
-            <option>Murder</option>
-            <option>Other</option>
-        </select>
+<h2>Welcome</h2>
 
-        <label>Location</label>
-        <input type="text" placeholder="Where did it happen?">
+<p>
+Report security incidents happening around campus quickly and safely.
+</p>
 
-        <label>Date</label>
-        <input type="date">
+<button onclick="document.getElementById('report').scrollIntoView()">
+Report an Incident
+</button>
 
-        <label>Description</label>
-        <textarea placeholder="Describe the incident"></textarea>
+</section>
 
-        <button type="submit">Submit Report</button>
+<section id="report">
 
-    </form>
+<h2>Incident Report Form</h2>
 
-</div>
+<form id="incidentForm">
+
+<label>Name (Optional)</label>
+<input type="text">
+
+<label>Incident Type</label>
+
+<select>
+
+<option>Theft</option>
+
+<option>Stabbing</option>
+
+<option>Assault</option>
+
+<option>Rape</option>
+
+<option>Murder</option>
+
+<option>Cultism</option>
+
+<option>Other</option>
+
+</select>
+
+<label>Location</label>
+
+<input type="text" placeholder="Enter Location">
+
+<label>Date</label>
+
+<input type="date">
+
+<label>Description</label>
+
+<textarea rows="5"></textarea>
+
+<button type="submit">
+
+Submit Report
+
+</button>
+
+</form>
+
+</section>
+
+<section id="emergency">
+
+<h2>Emergency Contacts</h2>
+
+<ul>
+
+<li>Campus Security : 080-123-45678</li>
+
+<li>Police : 199</li>
+
+<li>Fire Service : 112</li>
+
+</ul>
+
+</section>
+
+<section id="about">
+
+<h2>About SIM</h2>
+
+<p>
+
+SIM is a mini web application developed for SEN202 to help students,
+staff and landlords report security incidents quickly.
+
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 SIM Project | SEN202 Software Engineering</p>
+
+</footer>
 
 <script src="script.js"></script>
 
